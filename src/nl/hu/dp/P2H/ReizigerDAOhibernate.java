@@ -29,6 +29,7 @@ public class ReizigerDAOhibernate implements ReizigerDAO {
             return true;
         } catch (Exception e) {
             if (tx != null) tx.rollback();
+            System.err.println("fout bij save reiziger: " + reiziger);
             e.printStackTrace();
             return false;
         }
@@ -44,6 +45,7 @@ public class ReizigerDAOhibernate implements ReizigerDAO {
             return true;
         } catch (Exception e) {
             if (tx != null) tx.rollback();
+            System.err.println("fout bij update reiziger: " + reiziger);
             e.printStackTrace();
             return false;
         }
@@ -59,6 +61,7 @@ public class ReizigerDAOhibernate implements ReizigerDAO {
             return true;
         } catch (Exception e) {
             if (tx != null) tx.rollback();
+            System.err.println("fout bij delete reiziger: " + reiziger);
             e.printStackTrace();
             return false;
         }
